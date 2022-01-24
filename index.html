@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=\, initial-scale=1.0">
+  <title>Indian Independence Day</title>
+  <link rel="stylesheet" href="assets/bootstrap-5.0.0-alpha1-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="shortcut icon" href="assets/Flag_of_India.svg" type="image/x-icon">
+  <link rel="stylesheet" href="assets/WOW.js/css/libs/animate.css">
+</head>
+
+<body class="container-body" onClick="playPause()">
+  <audio id="anthem" src="assets/Sare jahan se acha full song.mp3" preload="auto"></audio>
+  <section>
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Tap Anywhere to Play/Pause Song</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Designed And Developed with &#10084; By <a href="https:usmanegani.me" target="_blank">Mohammed
+              Usman E
+              Gani</a>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flag-and-title text-center">
+      <div class="flag wow flipInX" data-wow-iteration="6">
+        <img src="assets/Flag_of_India.svg">
+      </div>
+      <div class="title-name mt-4 wow wobble" data-wow-iteration="6">
+        <h1>Happy Republic Day<br>2022</h1>
+      </div>
+    </div>
+    <div class="set">
+      <div><img src="assets/images/leaves1.png"></div>
+      <div><img src="assets/images/leaves2.png"></div>
+      <div><img src="assets/images/leaves3.png"></div>
+      <div><img src="assets/images/leaves4.png"></div>
+      <div><img src="assets/images/leaves1.png"></div>
+      <div><img src="assets/images/leaves2.png"></div>
+      <div><img src="assets/images/leaves3.png"></div>
+      <div><img src="assets/images/leaves4.png"></div>
+    </div>
+    <div class="set set2">
+      <div><img src="assets/images/leaves1.png"></div>
+      <div><img src="assets/images/leaves2.png"></div>
+      <div><img src="assets/images/leaves3.png"></div>
+      <div><img src="assets/images/leaves4.png"></div>
+      <div><img src="assets/images/leaves1.png"></div>
+      <div><img src="assets/images/leaves2.png"></div>
+      <div><img src="assets/images/leaves3.png"></div>
+      <div><img src="assets/images/leaves4.png"></div>
+    </div>
+    <div class="set set3">
+      <div><img src="assets/images/leaves1.png"></div>
+      <div><img src="assets/images/leaves2.png"></div>
+      <div><img src="assets/images/leaves3.png"></div>
+      <div><img src="assets/images/leaves4.png"></div>
+      <div><img src="assets/images/leaves1.png"></div>
+      <div><img src="assets/images/leaves2.png"></div>
+      <div><img src="assets/images/leaves3.png"></div>
+      <div><img src="assets/images/leaves4.png"></div>
+    </div>
+  </section>
+
+  <script src="assets/WOW.js/dist/wow.min.js"></script>
+  <script src="assets/jquery-3.5.1.slim.js"></script>
+  <script src="assets/bootstrap-5.0.0-alpha1-dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    new WOW().init();
+
+    var myAudio = document.getElementById("anthem");
+    var isPlaying = false;
+
+    function playPause() {
+      if (isPlaying) {
+        myAudio.pause();
+      } else {
+        myAudio.play();
+      }
+    };
+    myAudio.onplaying = function () {
+      isPlaying = true;
+    };
+    myAudio.onpause = function () {
+      isPlaying = false;
+    };
+  </script>
+
+  <script>
+    $(window).on('load', function () {
+      $('#myModal').modal('show');
+    });
+  </script>
+</body>
+
+</html>
